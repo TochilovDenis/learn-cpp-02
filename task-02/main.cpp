@@ -7,9 +7,9 @@
 
 using namespace std;
 
-const string names[] = { "Денис", "Александр", "Никита", "Алексей", "Дмитрий" };
+const string names[]    = { "Денис", "Александр", "Никита", "Алексей", "Дмитрий" };
 const string surnames[] = { "Точилов", "Михайлов", "Сердитов", "Кузнецов", "Морозов" };
-const string groups[] = { "311", "22", "343", "24", "545" };
+const string groups[]   = { "311", "22", "343", "24", "545" };
 
 class Student{
 	string name;
@@ -34,7 +34,7 @@ public:
     		os << student.GetString(student);
     		return os;
 	}
-	static string GetString(const Student& sttudent) {
+	static string GetString(const Student& student) {
 		string idStr = to_string(student.ID());
  		(idStr.length() > 3) ? idStr = idStr.substr(idStr.length() - 3) :
      			idStr = string(3 - idStr.length(), ' ') + idStr;
